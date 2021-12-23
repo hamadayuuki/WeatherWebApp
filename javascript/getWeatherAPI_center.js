@@ -27,7 +27,7 @@ function getTrainList() {
         var weather = json[0]["timeSeries"][0]["areas"][0]["weathers"][0];   //
         var weather_firstElement = weather.split(" ")[0];
         
-        document.getElementById("place").innerHTML = placeName;
+        //document.getElementById("place").innerHTML = placeName;
         document.getElementById("tempreture").innerHTML = String(temps[0]) +"℃ / " + String(temps[1])+ "℃";
         document.getElementById("weather").innerHTML = weather;
 

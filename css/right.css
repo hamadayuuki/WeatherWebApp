@@ -6,7 +6,7 @@
 #day_after_tomorrow{
 	text-align: center;
 	font:bold 50pt sans-serif; color:#111111;
-	margin: 0px
+	margin: 170px 0px 20px 0px;
 }
 
 #weatherIcon{
@@ -39,3 +39,4 @@
 #day_after_tomorrow{
 	text-align: center;
 }
+
