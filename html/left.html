@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/left.css"/>
+<meta charset="utf-8">
+<script type="text/javascript" src="../javascript/getWeatherAPI_left.js"></script>
+<title>無題ドキュメント</title>
+	 <script>
+      function updateClock() {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        if ( hour < 10 ) hour = "0" + hour;
+        if ( minute < 10 ) minute = "0" + minute;
+        if ( second < 10 ) second = "0" + second;
+        document.getElementById('myClock').innerHTML = hour+":"+minute+":"+second;
+      }
+      function start() {
+        setInterval("updateClock();", 1000);
+        updateClock();
+      }
+    </script>
+	<script>
+	//今日の日付データを変数に格納
+function getToday() {
+//変数は"today"とする
+var today=new Date(); 
+
+//年・月・日・曜日を取得
+var year = today.getFullYear();
+var month = today.getMonth()+1;
+var week = today.getDay();
+var day = today.getDate();
+
+var week_ja= new Array("日","月","火","水","木","金","土");
+	
+	document.getElementById("view_today").innerHTML =month+"/"+day+"  "+week_ja[week];
+	document.getElementById("view_year").innerHTML =year;
+}
+	//年・月・日・曜日を書き出す
+	window.onload=function(){
+		getToday();
+		start();
+		updateClock();
+	}
+
+</script>
+	
+	
+	
+	
+	
+	
+	
+</head>
+
+<body>
+	
+
+	<div id="view_year"> </div>
+	
+	<h1 id="price">鹿児島の天気</h1>
+	
+	<h1 id="todaycheracter" >今日</h1>
+
+	<div id = "weatherIcon">
+		<img src="../Pic/cloudy.png" 　alt="晴れのち曇り" title="晴れのち曇り" class="image-vw">
+	</div>
+	
+    <style type="text/css">	.image-vw {width : 60vw ; }</style>
+<!--
+文字列
+-->	
+	
+	<div id="view_today" align="center"></div>
+	
+	<div id="myClock" align="center"></div>
+	
+	<p id="chance_of_rain">降水確率%</p>
+	
+	<p id="tempreture">最高気温℃ / 最低気温℃</p>
+
+	<p id="weather">天気</p>
+
+	
+<!--
+文字列
+-->	
+		
+<!--
+背景
+-->
+	<div id="gradient"></div>
+	<style type="text/css">body {background-color:  #A7F1FF;}</style>
+	<!--
+背景
+-->
+</body>
+</html>

@@ -1,0 +1,41 @@
+#view_year{
+	text-align: center;
+	font:bold 20pt sans-serif; color:#111111;
+}
+
+#day_after_tomorrow{
+	text-align: center;
+	font:bold 50pt sans-serif; color:#111111;
+	margin: 0px
+}
+
+#weatherIcon{
+	display: block; margin: auto;
+	width : 60vw ; 
+}
+
+#view_today{
+	text-align: center;
+	font:bold 20pt sans-serif; color:#111111;
+	margin-top: 30px
+}
+
+#myClock{
+	font:bold 15pt sans-serif; color:#111111;
+}
+
+#chance_of_rain{
+	text-align: center;
+}
+
+#tempreture{
+	text-align: center;
+}
+
+#weather{
+	text-align: center;
+}
+
+#day_after_tomorrow{
+	text-align: center;
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/right.css"/>
+<meta charset="utf-8">
+<script type="text/javascript" src="../javascript/getWeatherAPI_right.js"></script>
+<title>無題ドキュメント</title>
+ <script>
+
+              //今日の日付データを変数に格納
+
+function day_after_tomorrow() {
+
+
+    var today = new Date();
+    console.log("今日=" + today);
+
+    today.setDate(today.getDate() + 2);
+    console.log("明後日=" + today);
+
+
+
+//月・日・曜日を取得
+
+var month = today.getMonth()+1;
+
+var week = today.getDay();
+
+var day = today.getDate();
+
+
+var week_ja= new Array("日","月","火","水","木","金","土");
+
+
+
+document.getElementById("view_today").innerHTML =month+"/"+day+"/"+week_ja[week];
+
+}
+
+              //月・日・曜日を書き出す
+
+window.onload=function(){
+day_after_tomorrow();
+}
+
+
+
+</script>
+</head>
+
+<body>
+
+    <p id="day_after_tomorrow">明後日</p>
+	
+	<div id = "weatherIcon">
+		<img src="../Pic/rainy.png" style="display: block; margin: auto;"　alt="雨" title="雨" class="image-vw">
+	</div>
+	
+	   <style type="text/css">	.image-vw {width : 60vw ; }</style>
+<!--
+文字列
+-->	
+	
+	<div id="view_today" align="center"></div>
+	
+	<div id="myClock" align="center"></div>
+	
+	<p id="chance_of_rain">降水確率%</p>
+	
+	<p id="tempreture">最高気温℃ / 最低気温℃</p>
+
+	<p id="weather">天気</p>
+
+	
+<!--
+文字列
+-->	
+		
+<!--
+背景
+-->
+	<div id="gradient"></div>
+	<style type="text/css">body {background-color: #9BF9CC;}</style>
+	<!--
+背景
+-->
+</body>
+</html>
