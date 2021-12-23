@@ -7,7 +7,7 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 
 @app.route('/html')
 def index():
-    return app.send_static_file('html/left.html')
+    return app.send_static_file('html/index.html')
     #return render_template("index.html")
 
 if __name__ == '__main__':
